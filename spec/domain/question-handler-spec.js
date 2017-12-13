@@ -21,4 +21,20 @@ describe('question-handler', () => {
       expect(result.Text.length).toBeGreaterThan(0);
     });
   });
+
+  describe('when reading a question', () => {
+    let result;
+
+    beforeAll(() => {
+      result = sut.read(75);
+    });
+
+    it('should return a question', () => {
+      expect(result).toBeDefined();
+    });
+
+    it('should return the correct question', () => {
+      expect(result.Id).toBe(75);
+    });
+  });
 });

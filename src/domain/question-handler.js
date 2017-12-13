@@ -4,5 +4,12 @@ module.exports = {
       Id: 'new',
       Text: 'The newest question',
     };
-  }
+  },
+
+  read: function(id) {
+    return {
+      Id: id,
+      Text: 'Question text',
+    };
+  },
 };
